@@ -1,0 +1,125 @@
+/* Example color palette */
+
+:root {
+    --primary-color: #3D5A80; /* Dark blue */
+    --secondary-color: #98C1D9; /* Light blue */
+    --accent-color: #EE6C4D; /* Coral */
+    --text-color: #293241; /* Dark gray */
+    --background-color: #E0FBFC; /* Light teal */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Additional styles for specific sections */
+.hero {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 50px;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.team-member {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 5px;
+}
+
+.team-member img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.project {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 5px;
+}
+
+.project img {
+    max-width: 100%;
+}
+
+.technology {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 5px;
+}
+
+.tools-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 5px;
+}
+
+.blog-post {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 5px;
+}
+
+.tags span {
+    margin-right: 10px;
+}
+
