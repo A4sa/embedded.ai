@@ -1,190 +1,427 @@
-/* Global Styles */
+/**
+ * Template Name: Personal - v2.1.0
+ * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  position: relative;
+  background: transparent;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+body::before {
+  content: "";
+  position: fixed;
+  background: #010e1b;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+@media (min-width: 1024px) {
+  body::before {
+    background-attachment: fixed;
+  }
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+a {
+  color: #12d640;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+a:hover {
+  color: #12d640;
+  text-decoration: none;
 }
 
-main {
-    padding: 20px;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: ease-in-out 0s;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 997;
+  overflow-y: auto;
 }
 
-/* Specific Styles for Each Page */
-
-/* team.html */
-.team-member {
-    text-align: center;
-    margin-bottom: 30px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#header * {
+  transition: ease-in-out 0s;
 }
 
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 15px;
+#header h1 {
+  font-size: 48px;
+  margin-top: 0px;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
 }
 
-.team-member h2 {
-    font-size: 24px;
-    margin-bottom: 5px;
+#header h1 a, #header h1 a:hover {
+  color: #dee2e6;
+  line-height: 1;
+  display: inline-block;
 }
 
-.team-member p {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #666;
+#header h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #12d640;
 }
 
-.team-member a {
-    text-decoration: none;
-    color: #007bff;
+#header h2 span {
+  color: #ffc107;
+  border-bottom: 2px solid #1c7d32;
+  padding-bottom: 6px;
 }
 
-.team-member a:hover {
-    text-decoration: underline;
+#header img {
+  padding: 0;
+  margin: 0;
 }
 
-/* project.html */
-.project {
-    margin-bottom: 30px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#header .social-links {
+  margin-top: 40px;
+  display: flex;
 }
 
-.project h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+#header .social-links a {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  line-height: 1;
+  margin-right: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
 
-.project p {
-    font-size: 16px;
-    margin-bottom: 15px;
+#header .social-links a:hover {
+  background: #1c7d32;
 }
 
-.project img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.project ul {
-    margin-top: 20px;
-    padding-left: 20px;
-}
-
-.project ul li {
-    list-style-type: disc;
-    margin-bottom: 5px;
-}
-
-/* technologies.html */
-.programming-languages,
-.hardware-platforms,
-.resources {
-    margin-bottom: 30px;
-}
-
-.programming-languages h2,
-.hardware-platforms h2,
-.resources h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.programming-languages ul,
-.hardware-platforms ul,
-.resources ul {
-    margin-top: 10px;
-    padding-left: 20px;
-}
-
-.programming-languages ul li,
-.hardware-platforms ul li,
-.resources ul li {
-    list-style-type: disc;
-    margin-bottom: 5px;
-}
-
-/* blog.html */
-.blog-post {
-    margin-bottom: 30px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.blog-post h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.blog-post p {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-.blog-post .tags {
+@media (max-width: 992px) {
+  #header h1 {
+    font-size: 36px;
+  }
+  #header h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #header .social-links {
     margin-top: 15px;
+  }
+  #header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.blog-post .tags span {
-    margin-right: 10px;
-    font-size: 14px;
-    color: #666;
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu {
+  margin-top: 35px;
 }
 
-.blog-post .share-icons {
-    margin-top: 15px;
+.nav-menu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.blog-post .share-icon,
-.blog-post .comment-icon {
-    margin-right: 10px;
-    text-decoration: none;
-    color: #007bff;
+.nav-menu li + li {
+  margin-left: 30px;
 }
 
-.blog-post .share-icon:hover,
-.blog-post .comment-icon:hover {
-    text-decoration: underline;
+.nav-menu a {
+  display: block;
+  position: relative;
+  color: #fff;
+  font-size: 19px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.nav-menu a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #9e7f25;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+  visibility: visible;
+  width: 25px;
+}
+
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+  color: #12d640;
+  text-decoration: none;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 1;
+  cursor: pointer;
+  text-align: right;
+}
+
+.mobile-nav-toggle i {
+  color: #fff;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  z-index: 9999;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.7);
+  transition: ease-in-out 0s;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  padding: 10px 0;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+.mobile-nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-nav a {
+  display: block;
+  position: relative;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 500;
+  outline: none;
+}
+
+.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+  color: #1c7d32;
+  text-decoration: none;
+}
+
+.mobile-nav-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  display: none;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+#main {
+  margin-top: 80px;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+#about {
+  background: rgba(1, 14, 27, 0.8);
+  padding: 60px 0;
+}
+
+#about .about-content .about-text {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 15px;
+  transition: ease-in-out 0s;
+}
+
+#about .about-content .about-text h3 {
+  color: #12d640;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#about .about-content .about-text h3 span {
+  color: #ffc107;
+}
+
+#about .about-content .about-text p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+#about .about-content .about-text i {
+  color: #12d640;
+  font-size: 24px;
+}
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+#skills {
+  background: rgba(1, 14, 27, 0.8);
+  padding: 60px 0;
+}
+
+#skills .progress {
+  height: 25px;
+  margin-bottom: 30px;
+}
+
+#skills .progress-bar {
+  background-color: #12d640;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+#portfolio {
+  background: rgba(1, 14, 27, 0.8);
+  padding: 60px 0;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.portfolio-item img {
+  transition: ease-in-out 0s;
+}
+
+.portfolio-item:hover img {
+  filter: brightness(0.6);
+}
+
+.portfolio-item .portfolio-info {
+  opacity: 0;
+  transition: ease-in-out 0s;
+}
+
+.portfolio-item:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio-item .portfolio-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.portfolio-item .portfolio-info h4 a, .portfolio-item .portfolio-info p a {
+  color: #12d640;
+}
+
+.portfolio-item .portfolio-info p {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+#contact {
+  background: rgba(1, 14, 27, 0.8);
+  padding: 60px 0;
+}
+
+#contact .info {
+  color: #fff;
+}
+
+#contact .info i {
+  font-size: 32px;
+  color: #12d640;
+  float: left;
+  line-height: 1;
+}
+
+#contact .info p {
+  padding: 0 0 10px 42px;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+#contact .info .email p {
+  padding-left: 58px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #010e1b;
+  padding: 30px 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+#footer p {
+  margin-bottom: 0;
+}
+
+#footer .credits {
+  font-size: 13px;
+  color: #fff;
+  margin-top: 5px;
+}
+
+#footer .credits a {
+  color: #12d640;
 }
