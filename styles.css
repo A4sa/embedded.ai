@@ -166,6 +166,12 @@ footer {
     text-decoration: underline;
 }
 
+/* Define a class for smaller logo size */
+.smaller-logo {
+    width: 30px; 
+    height: auto; 
+}
+
 /* project.html */
 .project {
     margin-bottom: 30px;
